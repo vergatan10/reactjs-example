@@ -1,13 +1,17 @@
+import { Fragment } from "react";
 import { useLogin } from "../hooks/useLogin";
+import Navbar from "../components/Layouts/Navbar";
 
 const ProfilePage = () => {
   const username = useLogin();
-  if (!username) window.location.href = "/login";
   return (
-    <div>
-      <h1>ProfilePage</h1>
-      <p>username : {username}</p>
-    </div>
+    <Fragment>
+      <Navbar />
+      <div>
+        <h1>ProfilePage</h1>
+        <p>username : {username}</p>
+      </div>
+    </Fragment>
   );
 };
 

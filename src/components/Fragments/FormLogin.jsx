@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Button from "../Elements/Button";
 import InputForm from "../Elements/Input";
 import { login } from "../../services/auth.service";
@@ -35,12 +35,14 @@ const FormLogin = () => {
         placeholder="john"
         name="username"
         ref={usernameRef}
+        value="johnd"
       />
       <InputForm
         label="Password"
         type="password"
         placeholder="*****"
         name="password"
+        value="m38rmF$"
       />
       <Button classname="bg-blue-600 w-full" type="submit">
         Login
