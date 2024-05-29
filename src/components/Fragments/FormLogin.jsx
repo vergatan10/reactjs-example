@@ -1,9 +1,12 @@
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import Button from "../Elements/Button";
 import InputForm from "../Elements/Input";
 import { login } from "../../services/auth.service";
+import { DarkMode } from "../../context/DarkMode";
 
 const FormLogin = () => {
+  const { isDarkMode } = useContext(DarkMode);
+
   const handleLogin = (event) => {
     event.preventDefault();
     const data = {
@@ -13,7 +16,7 @@ const FormLogin = () => {
     login(data, (status, token) => {
       if (status) {
         localStorage.setItem("token", token);
-        window.location.href = "/products";
+        window.location.href = "/";
       } else {
         window.location.href = "/login";
         return;
