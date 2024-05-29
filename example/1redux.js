@@ -34,6 +34,6 @@ const action1 = { type: "ADD_TO_CART", payload: { id: 1, qty: 20 } };
 store.dispatch(action1);
 
 const action2 = { type: "ADD_TO_CART", payload: { id: 10, qty: 5 } };
-store.dispatch(action1);
+store.dispatch(action2);
 
 // run : node redux
